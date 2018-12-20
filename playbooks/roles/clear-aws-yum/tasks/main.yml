@@ -13,7 +13,7 @@
     path: /etc/cloud/cloud.cfg
     regexp: '^ - rh_subscripiton'
     line: '# - rh_subscription' 
-    backuprefs: yes
+    backrefs: yes
 
 - name: yum repo cloud init configuration
   lineinfile:

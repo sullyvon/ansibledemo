@@ -20,7 +20,7 @@
     path: /etc/cloud/cloud.cfg
     regexp: '^ - yum-add-repo'
     line: '# - yum-add-repo' 
-    backuprefs: yes
+    backrefs: yes
 
 - name: remove aws default yum configuration
   command: bash -c '{{item}}'

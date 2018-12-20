@@ -8,6 +8,20 @@
   - sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/amazon-id.conf
   - sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/rhui-lb.conf
 
+- name: disable cloud init rh_subscription
+  lineinfile:
+    path: /etc/cloud/cloud.cfg
+    regexp: '^ - rh_subscripiton'
+    line: '# - rh_subscription' 
+    backuprefs: yes
+
+- name: yum repo cloud init configuration
+  lineinfile:
+    path: /etc/cloud/cloud.cfg
+    regexp: '^ - yum-add-repo'
+    line: '# - yum-add-repo' 
+    backuprefs: yes
+
 - name: remove aws default yum configuration
   command: bash -c '{{item}}'
   with_items:

@@ -1,0 +1,5 @@
+---
+rhsm_server_hostname: 'rhsat.dippiedo.com'
+sat_bootstrap_rpm: 'katello-ca-consumer-rhsat.dippiedo.com-1.0-1.noarch.rpm'
+rhsm_activation_key: 'baseline_rhel7'
+rhsm_org_id: 'gcsps'

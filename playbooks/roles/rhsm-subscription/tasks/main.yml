@@ -1,4 +1,4 @@
---
+---
 - name: Allow rhsm a longer timeout to help out with subscription-manager
   lineinfile:
     dest: /etc/rhsm/rhsm.conf

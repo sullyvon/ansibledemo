@@ -1,0 +1,16 @@
+---
+
+- name: remove aws default yum configuration
+  command: bash -c '{{item}}'
+  with_items:
+  - sed -i 's/enabled=1/enabled=0/g' /etc/yum.repos.d/redhat-rhui-client-config.repo
+  - sed -i 's/enabled=1/enabled=0/g' /etc/yum.repos.d/redhat-rhui.repo
+  - sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/amazon-id.conf
+  - sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/rhui-lb.conf
+
+- name: remove aws default yum configuration
+  command: bash -c '{{item}}'
+  with_items:
+  - yum clean all
+  ignore_erros: yes
+  

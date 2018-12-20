@@ -12,5 +12,6 @@
   command: bash -c '{{item}}'
   with_items:
   - yum clean all
+  - yum repolist
   ignore_erros: yes
   
